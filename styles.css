@@ -1,0 +1,241 @@
+:root {
+  --light-pink: hsl(6, 100%, 80%); /* Left gradient */
+  --dark-pink: hsl(335, 100%, 65%); /* Right gradient */
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --vdk-blue: hsl(229, 57%, 11%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  background-image: url('images/bg-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bg-desktop {
+  display: none;
+}
+
+.container {
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: var(--dark-blue);
+  border-radius: 0.5rem;
+  width: 300px;
+}
+
+.container .card.logo {
+  padding: 2rem 0 2rem 2.5rem;
+  border-top-right-radius: 5.5rem;
+  margin-bottom: 1rem;
+}
+
+.card.logo header img {
+  width: 7.5rem;
+}
+
+.card .files-container {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.card .files-container .file {
+  width: 41px;
+  height: 41px;
+  background-color: var(--vdk-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  margin-top: 1.4rem;
+}
+
+.card .files-container .file img {
+  width: 1.2rem;
+}
+
+.container .card.details {
+  padding: 1.5rem 0 4.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.card.details p {
+  color: var(--grayish-blue);
+  margin-bottom: 0.8rem;
+}
+
+.card.details .giga {
+  color: var(--pale-blue);
+  font-weight: 700;
+}
+
+.card.details .range-container {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.card.details .range {
+  height: 1.1rem;
+  background-color: hsl(228deg 59.14% 18.24%);
+  border-radius: 10px;
+  position: relative;
+}
+
+.card.details .range .progress {
+  border-radius: 10px;
+  height: 75%;
+  width: 70%;
+  position: absolute;
+  top: 15%;
+  left: 3px;
+  background-image: linear-gradient(to right, var(--light-pink), var(--dark-pink));
+}
+
+.card.details .range .progress::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  width: 11px;
+  height: 11px;
+  background-color: white;
+  border-radius: 50%;
+  top: 1px;
+}
+
+.card.details .range-container .empty-space,
+.card.details .range-container .total-space {
+  position: absolute;
+  top: 1.5rem;
+}
+
+.card.details .range-container .empty-space {
+  left: 0;
+}
+
+.card.details .range-container .total-space {
+  right: 0;
+}
+.card.details .left-space-container {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.left-space-container .unused-space {
+  color: var(--vdk-blue);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.left-space-container .left-space {
+  color: var(--grayish-blue) !important;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url('/* I want the background color to overide */');
+    background-color: var(--vdk-blue) !important;
+    overflow: hidden;
+  }
+
+  .bg-desktop {
+    display: block;
+    position: absolute;
+    bottom: -80px;
+  }
+
+.bg-desktop::before,
+.bg-desktop::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  right: -100px;
+}
+
+.bg-desktop::before {
+  background: #172556;
+  height: 200px;
+  bottom: 0;
+}
+
+.bg-desktop::after {
+  height: 281px;
+  background: #0f1b3d;
+}
+
+  .container {
+    width: 750px;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-end;
+  }
+
+  .container .card.logo {
+    width: 280px;
+    margin-bottom: 0;
+  } 
+
+  .container .card.details {
+    flex: 1;
+    padding: 1.7rem 2rem 3.5rem 2rem;
+    text-align: left;
+  }
+
+  .container .card.details .range-container {
+    width: 100%;
+  }
+
+  .card.details .left-space-container {
+    bottom: 85%;
+    left: 76.5%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card.details .left-space-container::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left-space-container .left-space {
+    font-size: 0.6rem !important;
+  }
+}
