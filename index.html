@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap">
+  <!-- main css file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="bg-desktop"><img src="images/bg-desktop.png" alt=""></div>
+  <div class="container">
+    <div class="card logo">
+      <header>
+        <img src="images/logo.svg" alt="logo">
+      </header>
+      <div class="files-container">
+        <div class="file"><img src="images/icon-document.svg" alt="file"></div>
+        <div class="file"><img src="images/icon-folder.svg" alt="file"></div>
+        <div class="file"><img src="images/icon-upload.svg" alt="file"></div>
+      </div>
+    </div>
+    <div class="card details">
+      <p>You’ve used <span class="giga used-space">815 GB</span> of your storage</p>
+      <div class="range-container">
+        <div class="range">
+          <span class="progress"></span>
+        </div>
+        <span class="giga empty-space">0 GB</span>
+        <span class="giga total-space">1000 GB</span>
+      </div>
+      <div class="left-space-container">
+        <span class="unused-space">185</span> <span class="giga left-space">GB Left</span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
